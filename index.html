@@ -113,6 +113,7 @@ scroll-behavior:smooth;
 </nav>
 
 <!-- Hero -->
+<!--
 <section class="hero h-screen flex items-center justify-center text-white text-center">
 <div class="hero-content">
 <h1 class="text-6xl font-bold mb-6">
@@ -126,14 +127,46 @@ Visitez la ferme
 </a>
 </div>
 </section>
+-->
+<section class="hero h-screen flex items-center justify-center text-white text-center relative px-4">
+    <div class="absolute inset-0 bg-black/30"></div>
+
+    <div class="hero-content relative z-10 max-w-3xl">
+    
+    <h1 class="text-5xl md:text-6xl font-serif font-bold mb-6 leading-tight italic tracking-wider">
+    « Semer aujourd'hui, <span class="text-green-400">pour récolter demain</span> »
+    </h1>
+
+
+
+    <p class="text-sm md:text-base italic mb-8 opacity-80">
+        Fénelon
+    </p>
+
+    <div class="w-24 h-1 bg-green-500 mx-auto mb-8 rounded-full"></div>
+
+    <p class="text-lg md:text-2xl italic font-light tracking-wide max-w-2xl mx-auto leading-relaxed">
+        Ferme pédagogique, ateliers nature et activités éducatives pour tous.
+    </p>
+
+    <div class="mt-10">
+        <a href="#carte" class="bg-white text-green-800 px-8 py-3 rounded-full font-semibold hover:bg-green-50 transition shadow-lg">
+        Découvrir notre ferme
+        </a>
+    </div>
+
+    </div>
+</section>
+
+
 
 <!-- Mission -->
 <section id="mission" class="max-w-6xl mx-auto py-24 px-6">
 <div class="grid md:grid-cols-2 gap-12 items-center">
 <img src="images/mission.jpg" class="rounded-lg shadow-lg" alt="La mission de la ferme Les Racines et les Ailes de Jayac" data-aos="fade-right">
 <div data-aos="fade-left">
-<h2 class="text-4xl font-bold mb-6">Notre mission</h2>
-<p class="mb-4">Retour aux fondamentaux</p>
+<h2 class="text-4xl font-bold mb-6">Notre passion</h2>
+<p class="mb-4">La mission de notre ferme est de reconnecter petits et grands aux fondamentaux en offrant une immersion authentique au cœur du vivant et du cycle des saisons. Nous transmettons les gestes simples de la terre pour cultiver le respect de la nature et le goût des produits vrais.</p>
 <p>Nos valeurs : partage, respect de l’environnement, apprentissage pratique et engagement communautaire.</p>
 </div>
 </div>
@@ -153,17 +186,17 @@ La nature du Périgord
 <div class="bg-gray-50 rounded-lg shadow p-6" data-aos="zoom-in">
 <img src="images/safran.jpg" class="rounded mb-4" alt="Cultures locales de la Ferme">
 <h3 class="text-xl font-bold mb-2">Cultures locales</h3>
-<p>Cultures locales description</p>
+<p>À Jayac, l'assiette célèbre l'union de la truffe noire du Périgord, aux arômes de sous-bois puissants, et du safran local qui apporte ses notes de miel et de foin. Ces produits d'exception subliment les recettes paysannes, transformant une simple omelette aux truffes ou un dessert safrané en une expérience gastronomique raffinée.</p>
 </div>
 <div class="bg-gray-50 rounded-lg shadow p-6" data-aos="zoom-in">
 <img src="images/animal.jpg" class="rounded mb-4" alt="Ateliers pédagogiques pour enfants à la Ferme des Horizons">
 <h3 class="text-xl font-bold mb-2">Animaux de petite taille</h3>
-<p>Conservatoire d'animaux de petite taille.</p>
+<p>Notre ferme abrite un conservatoire unique dédié aux races miniatures et de petite taille, véritables trésors de biodiversité souvent méconnus. C'est un projet de cœur qui permet aux plus petits de créer un lien direct et rassurant avec l'animal, tout en apprenant l'importance de préserver ces lignées rares.</p>
 </div>
 <div class="bg-gray-50 rounded-lg shadow p-6" data-aos="zoom-in">
-<img src="images/enfant.jpg" class="rounded mb-4" alt="Verger partagé de la Ferme des Horizons">
+<img src="images/enfant.png" class="rounded mb-4" alt="Enfants qui joue avec des animaux">
 <h3 class="text-xl font-bold mb-2">Découverte pédagogique</h3>
-<p>Aimer les animaux c'est les connaître, nous proposons organsisons...</p>
+<p>Aimer les animaux, c'est d'abord apprendre à les connaître. Nous organisons des ateliers d'immersion où l'observation et le soin quotidien permettent de comprendre le rythme du vivant et l'importance de chaque espèce dans notre environnement.</p>
 </div>
 </div>
 </div>
@@ -217,7 +250,7 @@ La nature du Périgord
 <section id="contact" class="bg-green-600 text-white py-24 text-center">
 <h2 class="text-4xl font-bold mb-6">Rejoignez l'aventure</h2>
 <p class="mb-8">Bénévolat, visites et ateliers pour tous.</p>
-<a href="mailto:contact@racinesjayac.fr"
+<a href="mailto:xavier.aniela@outlook.fr" 
 class="bg-white text-green-700 px-8 py-4 rounded font-bold hover:bg-gray-100 inline-block">
 Nous contacter
 </a>
@@ -225,7 +258,7 @@ Nous contacter
 
 <!-- Footer -->
 <footer class="bg-gray-900 text-white text-center p-6">
-©️ 2026 Ferme les Racines et les Ailes de Jayay
+©️ 2026 Ferme Les Racines et les Ailes de Jayac
 </footer>
 
 <!-- Scripts -->
@@ -234,9 +267,9 @@ Nous contacter
 AOS.init();
 
 // Carte Leaflet
-var map = L.map('map').setView([45.031234, 1.344510], 12); 
+var map = L.map('map').setView([45.012626, 1.352835], 12); 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
-L.marker([45.031234, 1.344510]).addTo(map)
+L.marker([45.012626, 1.352835]).addTo(map)
 .bindPopup('Ferme Les Racines et les Ailes de Jayac')
 .openPopup();
 
