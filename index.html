@@ -73,7 +73,7 @@ transform:translateY(0);
 
 .parallax-section{
 height:70vh;
-background-image:url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b");
+background-image:url("images/intermediaire.jpg");
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
@@ -130,7 +130,7 @@ Visitez la ferme
 <!-- Mission -->
 <section id="mission" class="max-w-6xl mx-auto py-24 px-6">
 <div class="grid md:grid-cols-2 gap-12 items-center">
-<img src="images/mission.jpg" class="rounded-lg shadow-lg" alt="La mission de la Ferme des Horizons" data-aos="fade-right">
+<img src="images/mission.jpg" class="rounded-lg shadow-lg" alt="La mission de la ferme Les Racines et les Ailes de Jayac" data-aos="fade-right">
 <div data-aos="fade-left">
 <h2 class="text-4xl font-bold mb-6">Notre mission</h2>
 <p class="mb-4">Retour aux fondamentaux</p>
@@ -151,17 +151,17 @@ La nature du Périgord
 <h2 class="text-4xl font-bold text-center mb-16">Nos projets</h2>
 <div class="grid md:grid-cols-3 gap-10">
 <div class="bg-gray-50 rounded-lg shadow p-6" data-aos="zoom-in">
-<img src="images/projet-potager.jpg" class="rounded mb-4" alt="Cultures locales de la Ferme">
+<img src="images/safran.jpg" class="rounded mb-4" alt="Cultures locales de la Ferme">
 <h3 class="text-xl font-bold mb-2">Cultures locales</h3>
 <p>Cultures locales description</p>
 </div>
 <div class="bg-gray-50 rounded-lg shadow p-6" data-aos="zoom-in">
-<img src="images/projet-atelier.jpg" class="rounded mb-4" alt="Ateliers pédagogiques pour enfants à la Ferme des Horizons">
+<img src="images/animal.jpg" class="rounded mb-4" alt="Ateliers pédagogiques pour enfants à la Ferme des Horizons">
 <h3 class="text-xl font-bold mb-2">Animaux de petite taille</h3>
 <p>Conservatoire d'animaux de petite taille.</p>
 </div>
 <div class="bg-gray-50 rounded-lg shadow p-6" data-aos="zoom-in">
-<img src="images/projet-verger.jpg" class="rounded mb-4" alt="Verger partagé de la Ferme des Horizons">
+<img src="images/enfant.jpg" class="rounded mb-4" alt="Verger partagé de la Ferme des Horizons">
 <h3 class="text-xl font-bold mb-2">Découverte pédagogique</h3>
 <p>Aimer les animaux c'est les connaître, nous proposons organsisons...</p>
 </div>
@@ -174,9 +174,9 @@ La nature du Périgord
 <div class="max-w-6xl mx-auto px-6">
 <h2 class="text-4xl font-bold text-center mb-16">Galerie</h2>
 <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-<img src="images/galerie1.jpg" class="rounded-lg shadow-lg" alt="Visite guidée enfants à la ferme" data-aos="zoom-in">
-<img src="images/galerie2.jpg" class="rounded-lg shadow-lg" alt="Animaux de petite taille" data-aos="zoom-in">
-<img src="images/galerie3.jpg" class="rounded-lg shadow-lg" alt="Récolte de safran, truffes et confections de produits locaux" data-aos="zoom-in">
+<img src="images/lulu1.jpeg" class="rounded-lg shadow-lg" alt="Visite guidée enfants à la ferme" data-aos="zoom-in">
+<img src="images/mariage.jpeg" class="rounded-lg shadow-lg" alt="Animaux de petite taille" data-aos="zoom-in">
+<img src="images/lulu2.jpeg" class="rounded-lg shadow-lg" alt="Récolte de safran, truffes et confections de produits locaux" data-aos="zoom-in">
 </div>
 </div>
 </section>
@@ -234,9 +234,9 @@ Nous contacter
 AOS.init();
 
 // Carte Leaflet
-var map = L.map('map').setView([48.8566, 2.3522], 12); // remplace par tes coordonnées GPS
+var map = L.map('map').setView([45.031234, 1.344510], 12); 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
-L.marker([48.8566, 2.3522]).addTo(map)
+L.marker([45.031234, 1.344510]).addTo(map)
 .bindPopup('Ferme Les Racines et les Ailes de Jayac')
 .openPopup();
 
