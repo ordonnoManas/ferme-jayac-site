@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Les Racines et les Ailes de Jayac – Ferme pédagogique & ateliers nature</title>
-<meta name="description" content="Découvrez la Ferme des Les Racines et les Ailes de Jayac, ferme pédagogique proposant ateliers, visites et activités éducatives pour enfants et adultes. Ferme incontournable de la Dodogne.">
+<meta name="description" content="Découvrez la Ferme des Les Racines et les Ailes de Jayac, ferme pédagogique proposant ateliers, visites et activités éducatives pour enfants et adultes. Ferme incontournable de la Dodogne et du Périgord.">
 <!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com"></script>
 <!-- AOS animations -->
@@ -89,6 +89,7 @@ text-shadow:0 0 20px black;
 <style>
 html{
 scroll-behavior:smooth;
+scroll-padding-top: 80px;
 }
 </style>
 
@@ -99,17 +100,25 @@ scroll-behavior:smooth;
 
 <!-- Navigation -->
 <nav class="bg-white shadow fixed w-full z-10">
-<div class="max-w-6xl mx-auto flex justify-between p-4">
-<h1 class="font-bold text-xl">Les Racines et les Ailes de Jayac</h1>
-<div class="space-x-6">
-<a href="#mission">Mission</a>
-<a href="#projets">Projets</a>
-<a href="#galerie">Galerie</a>
-<a href="#carte">Notre ferme</a>
-<a href="#evenements">Événements</a>
-<a href="#contact">Contact</a>
-</div>
-</div>
+    <div class="max-w-6xl mx-auto flex justify-between items-center p-4 relative">
+    <h1 class="font-bold text-xl">Les Racines et les Ailes de Jayac</h1>
+
+    <!-- Bouton hamburger -->
+    <button id="hamburger" class="flex flex-col gap-2 cursor-pointer rounded-xl" style="background:#15803d; padding:12px 14px; border:none;">
+    <span id="bar1" class="block bg-white rounded-full" style="width:28px; height:3px;"></span>
+    <span id="bar2" class="block bg-white rounded-full" style="width:28px; height:3px;"></span>
+    <span id="bar3" class="block bg-white rounded-full" style="width:28px; height:3px;"></span>
+    </button>
+
+    <!-- Menu déroulant -->
+    <div id="nav-menu" class="hidden absolute top-full right-4 rounded-xl shadow-xl overflow-hidden" style="min-width:220px; z-index:999; background:#14532d; border: 1px solid #166534;">
+    <a href="#passion" class="block px-6 py-4 text-sm font-medium text-green-100 hover:bg-green-700 border-b border-green-800">🌱 Passion</a>
+    <a href="#projets" class="block px-6 py-4 text-sm font-medium text-green-100 hover:bg-green-700 border-b border-green-800">🌿 Projets</a>
+    <a href="#galerie" class="block px-6 py-4 text-sm font-medium text-green-100 hover:bg-green-700 border-b border-green-800">📷 Galerie</a>
+    <a href="#carte" class="block px-6 py-4 text-sm font-medium text-green-100 hover:bg-green-700 border-b border-green-800">📍 Où nous trouver</a>
+    <a href="#evenements" class="block px-6 py-4 text-sm font-medium text-green-100 hover:bg-green-700 border-b border-green-800">📅 Événements</a>
+    <a href="#contact" class="block px-6 py-4 text-sm font-medium text-green-100 hover:bg-green-700">✉️ Contact</a>
+    </div>
 </nav>
 
 <!-- Hero -->
@@ -160,8 +169,8 @@ Visitez la ferme
 
 
 
-<!-- Mission -->
-<section id="mission" class="max-w-6xl mx-auto py-24 px-6">
+<!-- Passion -->
+<section id="passion" class="max-w-6xl mx-auto py-24 px-6">
 <div class="grid md:grid-cols-2 gap-12 items-center">
 <img src="images/mission.jpg" class="rounded-lg shadow-lg" alt="La mission de la ferme Les Racines et les Ailes de Jayac" data-aos="fade-right">
 <div data-aos="fade-left">
@@ -217,7 +226,7 @@ La nature du Périgord
 <!-- Carte -->
 <section id="carte" class="py-24">
 <div class="max-w-6xl mx-auto px-6 text-center">
-<h2 class="text-4xl font-bold mb-8">Notre ferme</h2>
+<h2 class="text-4xl font-bold mb-8">Où nous trouver</h2>
 <div id="map" class="w-full h-96 rounded-lg shadow-lg"></div>
 </div>
 </section>
@@ -280,7 +289,41 @@ if(window.innerWidth > 768){
     document.querySelector(".hero").style.backgroundSize = 120 + scroll*0.03 + "%";
 }
 });
+
+function toggleMenu() {
+    const menu = document.getElementById('nav-menu');
+    const btn = document.getElementById('hamburger');
+    menu.classList.toggle('hidden');
+    btn.classList.toggle('open');
+}
+
+// Menu hamburger
+var hamburger = document.getElementById('hamburger');
+var navMenu = document.getElementById('nav-menu');
+
+hamburger.addEventListener('click', function(e) {
+    e.stopPropagation();
+    hamburger.classList.toggle('open');
+    navMenu.classList.toggle('hidden');
+});
+
+// Fermer en cliquant sur un lien
+navMenu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+    hamburger.classList.remove('open');
+    navMenu.classList.add('hidden');
+});
+});
+
+// Fermer en cliquant ailleurs
+document.addEventListener('click', function(e) {
+    if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+    hamburger.classList.remove('open');
+    navMenu.classList.add('hidden');
+}
+});
 </script>
+
 
 </body>
 </html>
